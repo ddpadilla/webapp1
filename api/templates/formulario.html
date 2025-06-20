@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Usuario</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'api/style.css' %}">
+</head>
+<body>
+  <h1>Registro de Usuario</h1>
+  <form id="registroForm">
+    <input type="hidden" id="usuarioId">
+
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="apellido">Apellido:</label><br>
+    <input type="text" id="apellido" name="apellido" required><br><br>
+
+    <label for="email">Correo:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <table id="tablaUsuarios">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Aquí se insertan los registros -->
+    </tbody>
+  </table>
+
+  <script src="{% static 'api/script.js' %}"></script>
+</body>
+</html>
